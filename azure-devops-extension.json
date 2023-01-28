@@ -1,9 +1,9 @@
 {
     "manifestVersion": 1,
     "id": "samples",
-    "publisher": "ms-samples",
-    "version": "1.0.391",
-    "name": "Extension Sample",
+    "publisher": "test-logupt",
+    "version": "1.0.409",
+    "name": "[logupt] Extension Sample",
     "description": "Azure DevOps extension sample",
     "categories": [
         "Azure Pipelines"

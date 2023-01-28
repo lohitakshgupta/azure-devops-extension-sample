@@ -32,10 +32,12 @@ class WorkItemOpenContent extends React.Component<{}, {}> {
 
     public componentDidMount() {
         SDK.init();
+        console.log("hello world SDK WorkItem Open");
         this.loadWorkItemTypes();
     }
 
     public render(): JSX.Element {
+        console.log("Rendering work item open");
         return (
             <Page className="sample-hub flex-grow">
                 <Header title="Work Item Open Sample" />
@@ -62,10 +64,14 @@ class WorkItemOpenContent extends React.Component<{}, {}> {
     }
 
     private async loadWorkItemTypes(): Promise<void> {
-
+        console.log("load work items called");
         const projectService = await SDK.getService<IProjectPageService>(CommonServiceIds.ProjectPageService);
         const project = await projectService.getProject();
-
+        
+        console.log("getting user info");
+        let userContext = SDK.getUser();
+        console.log(userContext);
+        
         let workItemTypeNames: string[];
 
         if (!project) {

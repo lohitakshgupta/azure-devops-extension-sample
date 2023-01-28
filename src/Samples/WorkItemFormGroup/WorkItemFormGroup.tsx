@@ -24,11 +24,13 @@ export class WorkItemFormGroupComponent extends React.Component<{},  WorkItemFor
 
   public componentDidMount() {
     SDK.init().then(() => {
+      console.log("hello world SDK");
       this.registerEvents();
     });
   }
 
   public render(): JSX.Element {
+    console.log("hello world SDK RENDER");
     return (
       <div>
         <Button

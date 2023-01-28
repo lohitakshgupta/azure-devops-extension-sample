@@ -4,6 +4,7 @@ import { CommonServiceIds, getClient, IHostPageLayoutService } from "azure-devop
 import { BuildDefinition, BuildRestClient } from "azure-devops-extension-api/Build";
 
 SDK.register("sample-build-menu", () => {
+    console.log("hello world SDK Menu");
     return {
         execute: async (context: BuildDefinition) => {
             const result = await getClient(BuildRestClient).getDefinition(context.project.id, context.id, undefined, undefined, undefined, true);
